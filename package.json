@@ -1,0 +1,40 @@
+{
+  "name": "ph-blog",
+  "version": "1.0.0",
+  "private": true,
+  "hexo": {
+    "version": "3.3.7"
+  },
+  "dependencies": {
+    "hexo": "^3.2.0",
+    "hexo-generator-archive": "^0.1.4",
+    "hexo-generator-category": "^0.1.3",
+    "hexo-generator-index": "^0.2.0",
+    "hexo-generator-tag": "^0.2.0",
+    "hexo-renderer-ejs": "^0.2.0",
+    "hexo-renderer-stylus": "^0.3.1",
+    "hexo-renderer-marked": "^0.2.10",
+    "hexo-server": "^0.2.0"
+  },
+  "description": "my blog use next",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "deploy": "hexo generate --deploy",
+    "build": "hexo generate",
+    "server": "hexo server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pharaoh2012/blog.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "pharaoh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pharaoh2012/blog/issues"
+  },
+  "homepage": "https://github.com/pharaoh2012/blog#readme"
+}

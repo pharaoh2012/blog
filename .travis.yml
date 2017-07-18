@@ -1,0 +1,34 @@
+sudo: false
+language: node_js
+node_js:
+  - node
+cache:
+  directories:
+    - node_modules
+branches:
+  only:
+    - master
+install:
+  - npm install
+before_script:
+  - git config --global user.name "pharaoh"
+  - git config --global user.email "pharaoh168@gmail.com"
+script:
+  - npm run build
+after_script:
+  - cd public
+  - git init
+  - git config user.name "pharaoh"
+  - git config user.email "pharaoh168@gmail.com"
+  - git add --all
+  - git commit -m "Update blog"
+  - git push --force --quiet "https://${GH_Token}@${GH_REF}" master:gh-pages
+os:
+- osx
+env:
+  global:
+    - GH_REF: github.com/pharaoh2012/blog.git
+    - secure: "mzMyRSLKIZu+DvHpUVWh/XP4Bi5TdRuYk5XdA4VsQrkmrmeBltO9CDlXgRl4yCrNuU5OU8NqGTpNg/ZsWXXvoUOGuidnFEgwZr27/nvZGAzZIbSO0txPymTPz3st1sOxy+OXomX6vUVAXpiVPn5GsprkJSvzKs2Z27LZHWMrNI0
+uGkey6eCcnpmxXnB44VVMhAwsVNYbThAE0JajoaDSLKdc70aFgsPcpWIr6d3C9UJIMZR6dPVbccFpCLOUcawf8dJC9jF9/CPQ2/BgSl9jDL7mTr9uYoWT9/s8Ld7C8BDAXmsZ2KEL0S9OWXty40/hsgWtTcSAzX8bHtH4lK9q7OaClYPvc14+L
++q0FBy1Elp/E7gzizMqB4xSHOGDslFxsTWAUXiQ5umgJKY8nTTlinIH0LNrDd3+SOZacm2n4WAL1xP9d+ygR/rCgK02+USF3N5IEjTSR2UYKcKOUUkS3SLWqd30oraYno/XETMbV3H820ROoDxREZKAIk2xN5fwmkmfu2SbE5sJtQa3pICXBbt
+FREzKdTKAl6OOaw7zYIO6y5wvQHZn7s3BcezvMAckj3wurG4SwtJ8ihoE+VOS8W2plZOSiRJdPwaw8mRq24yBd4yDLzhi/HufJLS3vV3h4csiBm1FuimmZ93jUtPbj51dxMH4aLT0Rmu4suma3KY="

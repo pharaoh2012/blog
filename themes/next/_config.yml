@@ -40,8 +40,8 @@ menu:
   home: /
   #categories: /categories
   #about: /about
-  archives: /archives
-  tags: /tags
+  archives: archives
+  tags: tags
   #sitemap: /sitemap.xml
   #commonweal: /404.html
 
@@ -71,9 +71,9 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
-#scheme: Pisces
+scheme: Pisces
 
 
 # ---------------------------------------------------------------
@@ -283,7 +283,7 @@ mathjax:
 
 
 # Swiftype Search API Key
-#swiftype_key:
+swiftype_key: CjW1MZAUnPZGJ2yWtfYy
 
 # Baidu Analytics ID
 #baidu_analytics:

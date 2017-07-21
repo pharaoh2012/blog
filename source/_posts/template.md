@@ -1,8 +1,11 @@
 ---
 title: 模板页面
-date: 2017-07-21 09:38:49
 categories: test
-tags: [test,test1]
+tags:
+  - test
+  - test1
+permalink: template-page
+date: 2017-07-21 09:38:49
 ---
 
 # 模板测试页面
